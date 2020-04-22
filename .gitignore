@@ -33,3 +33,5 @@
 
 ./lib
 ./build
+./src/CMakeFiles
+./tst/CMakeFiles
