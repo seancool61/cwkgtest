@@ -1,6 +1,11 @@
 pipeline {
    agent { label 'ubuntu'}
    stages {
+      stage('list all files in the directory') {
+         steps {
+            sh 'ls -l -R'
+         }
+      }
       stage('googletest') {
          steps {
             sh 'mkdir -p ./{build,lib} && cd lib && git clone https://github.com/google/googletest/ && cd ..'
