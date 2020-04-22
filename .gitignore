@@ -33,5 +33,3 @@
 
 ./lib/googletest
 ./build/
-./src/CMakeFiles
-./tst/CMakeFiles
