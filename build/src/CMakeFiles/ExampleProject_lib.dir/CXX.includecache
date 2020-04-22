@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/cku/Documents/git/cwkgtest/src/Formula.cpp
+Formula.h
+/home/cku/Documents/git/cwkgtest/src/Formula.h
+
+/home/cku/Documents/git/cwkgtest/src/Formula.h
+iostream
+-
+
+/home/cku/Documents/git/cwkgtest/src/main.cpp
+main.h
+/home/cku/Documents/git/cwkgtest/src/main.h
+
+/home/cku/Documents/git/cwkgtest/src/main.h
+iostream
+-
+Formula.h
+/home/cku/Documents/git/cwkgtest/src/Formula.h
+
