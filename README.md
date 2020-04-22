@@ -14,5 +14,5 @@ https://raymii.org/s/tutorials/Cpp_project_setup_with_cmake_and_unit_tests.html
 > make clean all
 > find . -executable -type f
 > ./src/ExampleProject_run
-> ./tst/ExampleProject_tst --gtest_output=xml
+> ./tst/ExampleProject_tst --gtest_output=xml:../report/
 ```

@@ -8,7 +8,7 @@ pipeline {
       }
       stage('create a folder for build') {
          steps {
-            sh 'mkdir -p ./build'
+            sh 'mkdir -p ./build ./report'
          }
       }
       stage('build') {
@@ -18,7 +18,7 @@ pipeline {
       }
       stage('run') {
          steps {
-            sh 'cd build && ./tst/ExampleProject_tst --gtest_output=xml'
+            sh 'cd build && ./tst/ExampleProject_tst --gtest_output=xml:../report/'
          }
       }
    }
