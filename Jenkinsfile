@@ -3,12 +3,12 @@ pipeline {
    stages {
       stage('list all files in the directory') {
          steps {
-            sh 'ls -l -R'
+            sh 'ls -l'
          }
       }
       stage('create a folder for build') {
          steps {
-            sh 'mkdir -p ./{build}'
+            sh 'mkdir -p ./build'
          }
       }
       stage('build') {
