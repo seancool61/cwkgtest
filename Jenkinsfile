@@ -18,7 +18,7 @@ pipeline {
       }
       stage('run') {
          steps {
-            sh 'cd build && ./tst/ExampleProject_tst --gtest_output=xml:../report/'
+            sh 'cd build && ./tst/ExampleProject_tst --gtest_output=xml:../report/ && cd ..'
          }
       }
    }
