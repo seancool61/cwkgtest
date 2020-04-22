@@ -3,7 +3,7 @@ pipeline {
    stages {
       stage('googletest') {
          steps {
-            sh 'cd lib && git clone https://github.com/google/googletest/ && cd ..'
+            sh 'mkdir -p ./{build,lib} && cd lib && git clone https://github.com/google/googletest/ && cd ..'
          }
       }
       stage('build') {
