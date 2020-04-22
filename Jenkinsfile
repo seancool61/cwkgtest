@@ -6,9 +6,9 @@ pipeline {
             sh 'ls -l -R'
          }
       }
-      stage('googletest') {
+      stage('create a folder for build') {
          steps {
-            sh 'mkdir -p ./{build,lib} && cd lib && git clone https://github.com/google/googletest/ && cd ..'
+            sh 'mkdir -p ./{build}'
          }
       }
       stage('build') {
