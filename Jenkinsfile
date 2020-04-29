@@ -21,8 +21,9 @@ pipeline {
       }
       stage('build') {
          steps {
-            sh 'cd ./build && pwd'
-            sh 'pwd && cmake .. -DCMAKE_BUILD_TYPE=Debug -G "Unix Makefiles"'
+            dir("${env.WORKSPACE}/build"){
+               sh 'pwd && cmake .. -DCMAKE_BUILD_TYPE=Debug -G "Unix Makefiles"'
+            }
             sh 'pwd && make'
          }
       }
