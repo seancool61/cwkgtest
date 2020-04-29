@@ -31,7 +31,7 @@ TEST(petTest, test1)
     EXPECT_EQ(Pet::count, 4);
 }
 
-TEST(petTest, test1)
+TEST(petTest, test2)
 {
     //arrange
     Dog dog1("poochie", 1);
