@@ -1,6 +1,6 @@
 #include "gtest/gtest.h"
 #include "../src/main.h"
-#include "../src/Formula.h"
+#include "../src/formula/Formula.h"
 
 TEST(blaTest, test1) {
     //arrange
