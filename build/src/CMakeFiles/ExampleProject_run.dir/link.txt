@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/ExampleProject_run.dir/formula/Formula.cpp.o CMakeFiles/ExampleProject_run.dir/main.cpp.o CMakeFiles/ExampleProject_run.dir/pet/pet.cpp.o  -o ExampleProject_run 
