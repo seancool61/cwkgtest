@@ -40,5 +40,5 @@ TEST(petTest, test2)
     stream << dog1;
     std::string str = stream.str();
     //assert
-    EXPECT_EQ(str, "My pet:poochie");
+    EXPECT_EQ(str, "my pet:poochie\n\tage:1\n\ttype:0\n");
 }
