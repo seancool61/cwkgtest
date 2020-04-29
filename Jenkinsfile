@@ -16,7 +16,9 @@ pipeline {
       }
       stage('fetch googletest') {
          steps {
-            sh 'cd ./lib && git clone https://github.com/google/googletest/ && cd ..'
+            dir("${env.WORKSPACE}/lib"){
+               sh 'git clone https://github.com/google/googletest'
+            }
          }
       }
       stage('build') {
