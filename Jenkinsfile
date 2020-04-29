@@ -8,6 +8,9 @@ pipeline {
       }
       stage('create a folder for build') {
          steps {
+            sh 'rm -rf ./build'
+            sh 'rm -rf ./lib'
+            sh 'rm -rf ./report'
             sh 'mkdir -p ./build ./lib ./report'
          }
       }
