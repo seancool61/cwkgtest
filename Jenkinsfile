@@ -24,14 +24,16 @@ pipeline {
             dir("${env.WORKSPACE}/build"){
                sh 'pwd && cmake .. -DCMAKE_BUILD_TYPE=Debug -G "Unix Makefiles"'
             }
-            sh 'pwd && make'
+            dir("${env.WORKSPACE}/build"){
+               sh 'pwd && make'
+            }
          }
       }
       stage('run') {
          steps {
-            sh 'cd build'
-            sh './tst/ExampleProject_tst --gtest_output=xml:../report/'
-            sh 'cd ..'
+            dir("${env.WORKSPACE}/build"){
+               sh 'pwd && ./tst/ExampleProject_tst --gtest_output=xml:../report/'
+            }
          }
       }
    }
