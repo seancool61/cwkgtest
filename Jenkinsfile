@@ -19,8 +19,8 @@ pipeline {
       stage('build') {
          steps {
             sh 'cd ./build && pwd'
-            sh 'cmake .. -DCMAKE_BUILD_TYPE=Debug -G "Unix Makefiles"'
-            sh 'make'
+            sh 'pwd && cmake .. -DCMAKE_BUILD_TYPE=Debug -G "Unix Makefiles"'
+            sh 'pwd && make'
          }
       }
       stage('run') {
