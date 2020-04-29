@@ -20,10 +20,13 @@ TEST(blaTest, test3) {
 TEST(petTest, test1) {
     //arrange
     Dog dog1("poochie",1);
+    Dog dog2("Angel",14);
+    Dog dog3("Toby",14);
+    Cat cat1("Melissa",1);
     //act
     dog1.make_sound();
     //assert
-    EXPECT_EQ (Pet::count,  1);
+    EXPECT_EQ (Pet::count,  4);
 }
 
 
