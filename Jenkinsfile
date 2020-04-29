@@ -8,9 +8,7 @@ pipeline {
       }
       stage('create a folder for build') {
          steps {
-            sh 'rm -rf ./build'
-            sh 'rm -rf ./lib'
-            sh 'rm -rf ./report'
+            sh 'rm -rf ./build ./lib ./report'
             sh 'mkdir -p ./build ./lib ./report'
          }
       }
@@ -24,17 +22,17 @@ pipeline {
       stage('build') {
          steps {
             dir("${env.WORKSPACE}/build"){
-               sh 'pwd && cmake .. -DCMAKE_BUILD_TYPE=Debug -G "Unix Makefiles"'
+               sh 'cmake .. -DCMAKE_BUILD_TYPE=Debug -G "Unix Makefiles"'
             }
             dir("${env.WORKSPACE}/build"){
-               sh 'pwd && make'
+               sh 'make'
             }
          }
       }
       stage('run') {
          steps {
             dir("${env.WORKSPACE}/build"){
-               sh 'pwd && ./tst/ExampleProject_tst --gtest_output=xml:../report/'
+               sh './tst/ExampleProject_tst --gtest_output=xml:../report/'
             }
          }
       }
